@@ -1,0 +1,97 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "diamond",
+          "foreground": "#26C6DA",
+          "background": "#546E7A",
+		  "leading_diamond": "",
+		  "trailing_diamond": ""
+        },
+        {
+          "type": "battery",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#193549",
+          "background": "#a2beef",
+		  "trailing_diamond": "\uE0B0",
+		  "leading_diamond": "",
+          "properties": {
+            "battery_icon": "\f583",
+            "color_background": true,
+            "charged_color": "#0476d0",
+            "charging_color": "#00D100",
+            "discharging_color": "#FFCD58",
+            "postfix": "\uF295 \uf583 "
+          }
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#193549",
+          "background": "#14c2dd",
+          "properties": {
+            "prefix": " \uE5FF ",
+            "style": "folder"
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#193549",
+          "background": "#a2c4e0",
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true,
+            "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }}"
+          }
+        },
+        {
+          "type": "node",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#6CA35E",
+          "properties": {
+            "prefix": " \uE718 "
+          }
+        },
+		{
+          "type": "executiontime",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#83769c",
+          "properties": {
+            "always_enabled": true,
+            "prefix": " \ufa1e",
+            "postfix": "\u2800"
+          }
+        },
+        {
+          "type": "exit",
+          "style": "diamond",
+          "foreground": "#ffffff",
+          "background": "#007800",
+          "leading_diamond": "",
+          "trailing_diamond": "\uE0b0",
+          "properties": {
+            "display_exit_code": false,
+            "always_enabled": true,
+            "error_color": "#f1184c",
+            "color_background": true,
+            "prefix": " "
+          }
+        }
+      ]
+    }
+  ],
+  "final_space": true
+}
